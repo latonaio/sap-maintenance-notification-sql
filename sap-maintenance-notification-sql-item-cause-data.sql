@@ -12,6 +12,6 @@ CREATE TABLE `sap_maintenance_notification_item_cause_data`
   `MaintNotificationRootCauseText`    varchar(60) DEFAULT NULL,
   `IsDeleted`                         tinyint(1) DEFAULT NULL,
     PRIMARY KEY (`MaintenanceNotification`, `MaintenanceNotificationItem`, `MaintenanceNotificationCause`),
-    CONSTRAINT `MaintenanceNotificationItemCauseData_fk` FOREIGN KEY (`MaintenanceNotification`) REFERENCES `sap_maintenance_notification_header_data` (`MaintenanceNotification`)
+    CONSTRAINT `SAPMaintenanceNotificationItemCauseData_fk` FOREIGN KEY (`MaintenanceNotification`) REFERENCES `sap_maintenance_notification_header_data` (`MaintenanceNotification`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
